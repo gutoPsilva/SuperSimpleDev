@@ -1,0 +1,14 @@
+.github{
+  background-color: rgb(42, 164, 79);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow .15s;
+}
+
+.github:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .15);
+}

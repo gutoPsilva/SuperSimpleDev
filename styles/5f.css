@@ -1,0 +1,23 @@
+*{
+  font-family: arial;
+  margin: 0px;
+}
+.current{
+  font-size: 2em;
+  margin-bottom: 3px;
+}
+.span-currency{
+  color: rgb(100, 100, 100);
+
+  font-size: .5em;
+}
+.gain{
+  color: rgb(1, 150, 1);
+  margin-bottom: 6px;
+}
+.after{
+  color: rgb(100, 100, 100);
+}
+.comparision{
+  color: rgb(253, 74, 74);
+}

@@ -1,0 +1,17 @@
+*{
+  font-family: arial;
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+}
+.title{
+  font-size: 2em;
+  margin-bottom: 18px;
+}
+.desc{
+  margin-bottom: 18px;
+}
+.link{
+  color: rgb(51, 51, 253);
+  font-weight: normal;
+}

@@ -1,0 +1,19 @@
+*{
+  font-family: arial;
+  margin: 3px;
+}
+.user{
+  font-weight: bold;
+}
+.account{
+  font-weight: normal;
+  color: rgb(100, 100, 100);
+}
+.part1{
+  width: 500px;
+  line-height: 22px;
+  margin-bottom: 18px;
+}
+.mention{
+  color: rgb(22, 162, 255);
+}

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.Uber{
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  height: 36px;
+  width: 105px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity .15s;
+}
+
+.Uber:hover{
+  opacity: .8;
+}
