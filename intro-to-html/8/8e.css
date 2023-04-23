@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+*{font-family: arial;}
+
+   .title{
+    font-size: 2em;
+    margin: 5px 0px 15px 0px;
+   }
+
+   .input-text{
+    display: block;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    width: 300px;
+    padding: 12px 15px;
+    margin-bottom: 5px;
+   }
+
+   .request-button{
+    background-color: #000000;
+    color: #FFFFFF;
+   }
+
+   .schedule-button{margin-left: 10px;}
+   
+   .request-button,
+   .schedule-button{
+    margin-top: 15px;
+    border: none;
+    padding: 12px;
+   }

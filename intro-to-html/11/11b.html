@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Testing</title>
+  <style>
+    .grid-container{
+      display: grid;
+      grid-template-columns: 50px 1fr 75px;
+    }
+    .grid-1{
+      background-color: lightblue;
+    }
+    .grid-2{
+      background-color: lightpink;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-1">col1</div>
+    <div class="grid-2">col2</div>
+    <div class="grid-1">col3</div>
+  </div>
+</body>
+</html>

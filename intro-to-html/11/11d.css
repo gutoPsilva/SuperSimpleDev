@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+*{
+  font-family: arial;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  column-gap: 15px;
+}
+.div-friendRequest{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.profilePicture{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.grid-info{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-left: 10px;
+}
+.name{
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+.grid-info-common{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.add-button{
+  font-size: 1em;
+  background-color: rgb(57, 117, 234);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+}
+.friend-picture{
+  width: 100%;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.friends-common{
+  margin: 0px;
+}
