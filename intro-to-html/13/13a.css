@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.flex-container{
+  display: flex;
+}
+.div-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  background-color: lightpink;
+}
+.div-2{
+  width: 200px;
+  background-color: lightblue;
+}
+.text{
+  background-color: #000000;
+  color: #FFFFFF;
+}

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+}
+
+p{
+  font-weight: bold;
+}
+
+.geral{
+  margin: 8px;
+  padding: 6px 12px;
+  width: 350px;
+  font-size: 14px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.principal{
+  margin-bottom: 10px;
+}
+
+.contato{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.div-image{
+  width: 40px;
+}
+
+.imagem-contato{
+  width: 100%;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.texto{
+  flex: 1;
+  margin-left: 7px;
+  
+}
+
+.info-contato{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nome-contato{
+  margin-bottom: 2px;
+}
+
+.description{
+  margin-top: 2px;
+}
+
+.hour{
+  font-size: .9em;
+}
+
+.principal,
+.hour,
+.description{
+  color: rgb(120, 120, 120);
+  font-weight: normal;
+}
