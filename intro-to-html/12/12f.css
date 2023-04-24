@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{
+  font-family: arial;
+}
+
+.flex-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(113, 84, 171);
+}
+
+.home{
+  margin-left: 10px;
+  color: #FFFFFF;
+}
+
+.search-bar{
+  border: none;
+  width: 500px;
+  padding: 6px 16px;
+  border-radius: 15px;
+}
+
+.download-button{
+  background-color: inherit;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}

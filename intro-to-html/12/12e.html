@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      font-family: arial;
+    }
+    .flex-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 200px;
+      border: 1px solid gray;
+      border-radius: 4px;
+      margin: 12px;
+      padding: 0px 12px;
+    }
+    .text{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 4px 0px;
+    }
+    .not-button{
+      padding: 5px 12px;
+      background-color: rgb(65, 108, 208);
+      border: none;
+      color: #FFFFFF;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="text">
+      <p>Home</p>
+      <button class="not-button">14</button>
+    </div>
+    <div class="text">
+      <p>Notifications</p>
+      <button class="not-button">3</button>
+    </div>
+    <div class="text">
+      <p>Messages</p>
+      <button class="not-button">5</button>
+    </div>
+  </div>
+</body>
+</html>
