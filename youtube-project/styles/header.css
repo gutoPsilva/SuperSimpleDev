@@ -35,10 +35,12 @@
 
 .hamburger-menu{
   margin: 0px 24px;
+  cursor: pointer;
 }
 
 .youtube-logo{
   height: 20px;
+  cursor: pointer;
 }
 
 .middle-section{
