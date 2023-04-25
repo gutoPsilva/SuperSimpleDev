@@ -1,0 +1,39 @@
+body{
+  font-family: arial;
+}
+
+.sidebar{
+  background-color: green;
+  color: white;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.title{
+  font-size: 2em;
+  margin: 0px;
+}
