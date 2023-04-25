@@ -1,0 +1,21 @@
+.gray-square{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(120, 120, 120);
+  height: 180px;
+  width: 320px;
+}
+
+.button-close{
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  padding: 10px 16px;
+  cursor: pointer;
+}
