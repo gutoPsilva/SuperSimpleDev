@@ -32,3 +32,27 @@
 .sidebar div{
   font-size: 10px;
 }
+
+@media screen and (min-width:1200px) {
+  body{
+    padding-left: 140px;
+  }
+
+  .sidebar{
+    width: 128px;
+  }
+
+  .sidebar-link{
+    flex-direction: row;
+    justify-content: start;
+    padding-left: 12px;
+  }
+
+  .sidebar-link div{
+    margin-left: 4px;
+  }
+
+  .sidebar div{
+    font-size: 12px;
+  }
+}

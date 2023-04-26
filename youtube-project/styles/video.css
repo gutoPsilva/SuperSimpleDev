@@ -5,21 +5,31 @@
   row-gap: 40px;
 }
 /* media queries*/
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px){
   .video-grid{
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 750px){
   .video-grid{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px){
   .video-grid{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .video-title{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video-creator,
+  .video-stats{
+  font-size: 14px;
   }
 }
 
