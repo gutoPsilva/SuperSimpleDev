@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    /*
+    const product = {
+      name: "socks",
+      price: 1090
+    };
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+    
+    product.name = "cotton socks";
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty;
+    console.log(product);
+    */
+
+    /*
+    const product2 = {
+      name: "shirt",
+      'delivery-time': '1 day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1(){
+        console.log('function inside object');
+      } 
+    };
+
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+
+    console.log(product2.rating.count);
+    product2.fun();
+
+    console.log(typeof console.log); // console é um objeto, .log é uma FUNÇÃO DENTRO DE UM OBJETO, ISSO É UM MÉTODO.
+    // Math.random() é outro MÉTODO.
+
+    // JSON é similar aos objetos de JS mas com MENOS FUNCIONALIDADES, não suporta funções dentro de objetos.
+    // JSON pode ser interpretada por praticamente QUALQUER LINGUAGEM DE PROGRAMAÇÃO, por isso as funções de JS não funcionam, pois fazem sentido apenas em JS.
+    // Usamos JSON quando enviamos dados entre computadores pois utilizar linguagens diferentes e também para guardar dados.
+
+    // Built-in JSON Object, permite converter um objeto JS para JSON.
+    // string de um objeto JS para um JSON 
+    console.log(JSON.stringify(product2));
+
+    // converter uma stringJSON para um objeto de JS.
+    const JSONString = JSON.stringify(product2);
+    console.log(JSON.parse(JSONString));
+
+    */
+
+    console.log("hello".length);
+    console.log("hello".toUpperCase());
+
+    // REFERÊNCIAS object1 é uma referência até o local na memória do PC onde está os valores dentro.
+    const object1 = {
+      message: 'hello'
+    };
+
+    // não é uma cópia, apenas a referência é igual, logo leva até o mesmo local na memória
+    const object2 = object1;
+
+    // mesmo object1 sendo um CONST, foi possível mexer no seu valor interior, pois É APENAS UMA REFERÊNCIA, NÃO UM VALOR EM SI
+    object1.message = 'good job';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'good job'
+    };
+
+    // COMPARAÇÕES ENTRE OBJETOS NÃO FUNCIONAM, pois a REFERÊNCIA que é comparada, NÃO SEUS VALORES INTERIORES, MESMO SENDO IGUAIS.
+    console.log(object3 === object1); // --> resulta em falso mesmo tendo valores iguais.
+    console.log(object2 === object1) // --> resulta em true pois OS DOIS SÃO A MESMA REFERÊNCIA.
+
+    const object4 = {
+      message: 'good job',
+      price: 799
+    };
+
+    // const message = object4.message; é o equivalente abaixo, SOMENTE SE O NOME DA VARIÁVEL FOR IGUAL A PROPRIEDADE DO OBJETO
+    // destructuring shortcut, tirar propriedades para fora do objeto
+    const {message, price} = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+      // message: message, ShortHand property, equivalente ao abaixo, criar uma propriedade que receba o valor de uma variável.
+      message,
+      // method: function function1(){
+      //   console.log('method')
+      // } ShortHand Method, código abaixo equivale ao comentado, 
+      method(){
+        console.log('method');
+      }
+    };
+
+    console.log(object5);
+    object5.method();
+  </script>
+</body>
+</html>
