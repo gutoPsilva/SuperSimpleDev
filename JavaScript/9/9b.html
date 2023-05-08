@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - DOM</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-button-b">9b</button>
+  <script>
+    const buttonElement = document.querySelector('button');
+    console.log(buttonElement);
+
+    const button9bElement = document.querySelector('.js-button-b');
+    button9bElement.innerHTML = "9b done!";
+  </script>
+</body>
+</html>

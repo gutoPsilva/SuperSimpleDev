@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables Exercises</title>
+</head>
+<body>
+  <button onclick="console.log(`Cart Quantity: ${cartQuantity}`);">Show Quantity</button>
+  <button onclick="updateCartQuantity(1)">Add to Cart</button>
+  <button onclick="updateCartQuantity(-1)">Remove from Cart</button>
+  <button onclick="updateCartQuantity(-3)">-3</button>
+  <button onclick="updateCartQuantity(-2)">-2</button>
+  <button onclick="updateCartQuantity(2)">+2</button>
+  <button onclick="updateCartQuantity(3)">+3</button>
+  <button onclick="updateCartQuantity(4)">+4</button>
+  <button onclick="updateCartQuantity(5)">+5</button>
+  <button onclick="updateCartQuantity(0)">Reset Cart</button>
+  <p></p>
+  <script>
+    let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+    const paragraphElement = document.querySelector('p');
+    paragraphElement.innerHTML = `Cart Quantity: ${cartQuantity}`;
+    function updateCartQuantity(number){
+      if(number > 0 && cartQuantity + number > 10){ // parâmetro positivo inválido
+        alert('The cart is full.');
+        return;
+      }
+      else if(number < 0 && cartQuantity + number < 0){ // parâmetro negativo inválido
+        alert('The cart is empty.');
+        return;
+      }
+      else if(number === 0){ // parâmetro 0, resetar
+        cartQuantity = 0;
+        console.log('Cart was reset.');
+        paragraphElement.innerHTML = `Cart Quantity: ${cartQuantity}`;
+        return;
+      }
+
+      // cartQuantity+=number altera o valor da variável, NÃO APENAS EXIBE.
+      paragraphElement.innerHTML = `Cart Quantity: ${cartQuantity+=number}`; // só chega nesse ponto se não retornar em nenhum dos outros
+      // pelo valor já ter sido somado ao cartQuantity, não é necessário soma-lo novamente.
+      JSON.stringify(localStorage.setItem('cartQuantity', cartQuantity));
+    }
+  </script>
+</body>
+</html>
