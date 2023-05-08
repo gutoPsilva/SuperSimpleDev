@@ -20,6 +20,7 @@
   <script>
     let calculation = localStorage.getItem('calculated') || "";
     const paragraphElement = document.querySelector('p');
+    paragraphElement.innerHTML = localStorage.getItem('calculated');
     function updateCalculation(operOrNumber){
       calculation += operOrNumber;
       paragraphElement.innerHTML = calculation;

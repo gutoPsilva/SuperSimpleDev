@@ -1,0 +1,21 @@
+.request{
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: arial;
+  font-weight: bold;
+  border: none;
+  margin-right: 20px;
+}
+
+.schedule{
+  background-color: rgb(230, 230, 230);
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: arial;
+  font-weight: bold;
+  border: none;
+}

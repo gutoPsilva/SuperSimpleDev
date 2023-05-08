@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="10i.css">
+  <title>Document</title>
+</head>
+<body>
+  <p class="result"></p>
+  <main>
+    <button onclick="updateCalculation('1')">1</button>
+    <button onclick="updateCalculation('2')">2</button>
+    <button onclick="updateCalculation('3')">3</button>
+    <button class="operational-button" onclick="updateCalculation(' + ')">+</button>
+    <button onclick="updateCalculation('4')">4</button>
+    <button onclick="updateCalculation('5')">5</button>
+    <button onclick="updateCalculation('6')">6</button>
+    <button class="operational-button" onclick="updateCalculation(' - ')">-</button>
+    <button onclick="updateCalculation('7')">7</button>
+    <button onclick="updateCalculation('8')">8</button>
+    <button onclick="updateCalculation('9')">9</button>
+    <button class="operational-button" onclick="updateCalculation(' * ')">*</button>
+    <button onclick="updateCalculation('0')">0</button>
+    <button onclick="updateCalculation('.')">.</button>
+    <button onclick="calculate()">=</button>
+    <button class="operational-button" onclick="updateCalculation(' / ')">/</button>
+    <button class="clear-button" onclick="clear()">Clear</button>
+  </main>
+
+  <script src="10i.js"></script>
+</body>
+</html>
