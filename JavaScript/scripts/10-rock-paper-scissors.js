@@ -31,7 +31,7 @@ function playGame(playerMove){
       result = 'You win!';
     }
     else{
-      result = 'Tie'
+      result = 'Tie';
     }
   }
   else if(playerMove === 'Paper'){
@@ -41,7 +41,7 @@ function playGame(playerMove){
       result = 'Tie';
     }
     else{
-      result = 'You lose!'
+      result = 'You lose!';
     }
   }
   else{
@@ -51,7 +51,7 @@ function playGame(playerMove){
       result = 'You lose!';
     }
     else{
-      result = 'You win!'
+      result = 'You win!';
     }
   }
 
