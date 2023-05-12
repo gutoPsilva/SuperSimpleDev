@@ -1,21 +1,25 @@
 function findIndex(array, word){
-  for(let i = 0; i < array.length; i++){
+  for(let i = 0; i<array.length; i++){
     if(array[i] === word){
-      return i; // está na lista
+      return i;
     }
   }
-  return -1; // não está na lista
+  return -1;
 }
 
 function unique(array){
-  const result = [];
-  for(let i = 0; i < array.length; i++){
+  const resultArray = [];
+  for(let i = 0; i<array.length; i++){
     const word = array[i];
-    if(findIndex(result, word) === -1){
-      result.push(word);
+    if(findIndex(resultArray, word) === -1){
+      resultArray.push(array[i]);
     }
   }
-  return result;
+  return resultArray;
 }
 
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
 console.log(unique(['green', 'red', 'blue', 'red']));
+console.log(unique(['green', 'red', 'green', 'red']));

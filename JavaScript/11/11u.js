@@ -1,19 +1,20 @@
-let foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
-function removeEggs(foods){
-  let someEggs = [];
+function removeEgg(foods){
+  const reversedFoods = foods.slice();
+  reversedFoods.reverse();
+  const someEggs = [];
   let cont = 0;
-  let copyFoods = foods.slice();
-  copyFoods.reverse()
-  for(let i = 0; i<copyFoods.length; i++){
-
-    if(copyFoods[i] === 'egg' && cont < 2){
+  for(let i = 0; i<reversedFoods.length; i++){
+    if(reversedFoods[i] === 'egg' && cont < 2){
       cont++;
-      continue; // para aqui e faz ITERAÇÃO no loop (somente se o if for atendido) o BREAK PARA TOTALMENTE O LOOP.
+      continue;
     }
-    someEggs.push(copyFoods[i]); // só chega aqui após a contagem de 2 ovos
+    else{
+      someEggs.push(reversedFoods[i]);
+    }
   }
   return someEggs.reverse();
 }
 
-console.log(removeEggs(foods));
+const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+console.log(removeEgg(foods));
 console.log(foods);

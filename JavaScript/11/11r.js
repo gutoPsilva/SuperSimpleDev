@@ -1,5 +1,5 @@
-function removeEggs(foods){
-  let noEggs = [];
+function removeEgg(foods){
+  const noEggs = [];
   for(let i = 0; i<foods.length; i++){
     if(foods[i] === 'egg'){
       continue;
@@ -11,4 +11,4 @@ function removeEggs(foods){
   return noEggs;
 }
 
-console.log(removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']));
+console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
