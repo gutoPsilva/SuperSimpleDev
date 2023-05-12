@@ -31,13 +31,17 @@ document.getElementById('add1').onclick = function(){
   const dateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dateInputElement.value;
 
-  // todoList.push({name: name, dueDate: dueDate})
-  todoList.push({name, dueDate});
+  // adiciona somente se houverem valores dueDate && name
+  if(dueDate && name){
+    // todoList.push({name: name, dueDate: dueDate})
+    todoList.push({name, dueDate});
 
-  localStorage.removeItem
-  inputElement.value = '';
-  saveToStorage();
-  renderTodoList();
+    localStorage.removeItem
+    inputElement.value = '';
+    dateInputElement.value = '';
+    saveToStorage();
+    renderTodoList();
+  }
 }
 
 function saveToStorage(){
