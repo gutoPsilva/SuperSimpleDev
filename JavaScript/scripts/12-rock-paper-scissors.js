@@ -4,11 +4,9 @@ document.querySelector('.js-reset-score-button').onclick = function(){
   score.losses = 0;
   updateScoreElement();
   localStorage.removeItem('score');
+  document.querySelector('.js-result').innerHTML = '';
+  document.querySelector('.js-moves').innerHTML = '';
 }
-
-document.querySelector('.js-auto-play-button').addEventListener('click', autoPlay);
-
-
 
 // || operador lógico OU, se tiver um localStorage 'score' pega esse, OU então utiliza o DEFAULT || 0
 let score = JSON.parse(localStorage.getItem('score')) || {
@@ -17,9 +15,9 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties:0
 }
 
-updateScoreElement();
+/* 
+faz o mesmo que o || acima
 
-/* faz o mesmo que o || acima
 if(!score){
   score = {
   wins:0,
@@ -29,23 +27,72 @@ if(!score){
 }
 */
 
+updateScoreElement();
+
+document.querySelector('.js-auto-play-button').addEventListener('click', autoPlay);
+
 let isAutoPlaying = false;
 let intervalId;
 
-function autoPlay(){
-  // senão estiver auto, começa
+// const autoPlay = () => {
+
+// };
+// AUTOPLAY ligado não permite que o usuário jogue.
+function autoPlay() {
   if(!isAutoPlaying){
-    intervalId = setInterval(function(){
+    document.querySelector('.js-auto-play-button').innerHTML = 'Stop Auto Play';
+    document.querySelector('.js-scissors-button').disabled = true;
+    document.querySelector('.js-rock-button').disabled = true;
+    document.querySelector('.js-paper-button').disabled = true;
+
+    document.querySelector('.js-rock-button').removeEventListener('click', () => {
+      playGame('Rock')
+    });
+
+    document.querySelector('.js-paper-button').removeEventListener('click', () => {
+      playGame('Paper')
+    });
+
+    intervalId = setInterval(() => {
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
   }
   else{
+    document.querySelector('.js-auto-play-button').innerHTML = 'Auto Play';
+    document.querySelector('.js-scissors-button').disabled = false;
+    document.querySelector('.js-rock-button').disabled = false;
+    document.querySelector('.js-paper-button').disabled = false;
+
     clearInterval(intervalId);
     isAutoPlaying = false;
   }
 }
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('Scissors')
+});
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('Rock')
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('Paper')
+});
+
+document.body.addEventListener('keydown', (event) => {
+  if(event.key === 'r'){
+    playGame('Rock');
+  }
+  else if(event.key === 'p'){
+    playGame('Paper');
+  }
+  else if(event.key === 's'){
+    playGame('Scissors');
+  }
+});
 
 //funções permitem reutilizar trechos de código quando são chamadas
 //função com parâmetro --> recebe valor
@@ -100,7 +147,6 @@ function playGame(playerMove){
   
   document.querySelector('.js-result').innerHTML = result;
   document.querySelector('.js-moves').innerHTML = `You <img src="images/${playerMove}-emoji.png" alt="${playerMove}-emoji" class="move-icon"><img src="images/${computerMove}-emoji.png" alt="${computerMove}-emoji" class="move-icon"> Computer`;
-
 }
 
 function updateScoreElement(){

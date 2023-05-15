@@ -11,23 +11,29 @@ renderTodoList();
 function renderTodoList(){
   let todoListHTML = '';
 
-  todoList.forEach(function(todoObject, index){
+  todoList.forEach((todoObject, index) => {
     const {name, dueDate} = todoObject;
     const html = `
       <div>${name}</div>
       <div>${dueDate}</div>   
-      <button class="delete-todo-button" onclick="
-        todoList.splice(${index}, 1);
-        renderTodoList();
-      ">Delete</button>
+      <button class="delete-todo-button js-delete-todo-button">Delete</button>
     `;
     todoListHTML += html;
   });
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+
+  // ALL retorna TODOS os elementos com a classe citada
+  document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () =>{
+      todoList.splice(index, 1);
+      renderTodoList();
+    })
+  });
+
 }
 
-document.getElementById('add1').onclick = function(){
+document.querySelector('.js-add-todo-button').addEventListener('click', () => {
   const inputElement = document.querySelector('.js-name-input');
   const name = inputElement.value;
 
@@ -42,4 +48,4 @@ document.getElementById('add1').onclick = function(){
     dateInputElement.value = '';
     renderTodoList();
   }
-}
+});
