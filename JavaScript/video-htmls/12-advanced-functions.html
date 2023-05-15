@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+  <script>
+    /*
+    // CRIAR FUNÇÕES ASSIM permite o HOISTING, chamar a função em qualquer hora sem se importar com a ordem do script
+    function greeting(){
+      console.log('hello');
+    }
+
+    greeting();
+
+    const num = 2;
+    // anonymous function
+    // já o anonymous function, atribuido a uma variável, só permite executar a função após a criação da variável
+    const function1 = function(){
+      console.log('hello2');
+    }
+
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    const object1 = {
+      num: 2,
+      // método, função dentro de um objeto
+      fun: function(){
+        console.log('hello3');
+      }
+    }
+    object1.fun();
+
+    function display(param){
+      console.log(param);
+    }
+    display(2);
+
+    // função como parâmetro de outra função
+    function run(param){
+      param();
+    }
+    // callback
+    run(function() {
+      console.log('hello4');
+    })
+    */
+
+    /*
+
+    // setTimeout é uma função já construída, que recebe como primeiro parâmetro uma função a ser executada após X ms fornecidos no segundo parâmetro.
+    // A FUNÇÃO INTERNA É O CALLBACK
+    // CÓDIGO ASSÍNCRONO não trava a execução do código, apenas possui um timer diferente que é executado enquanto o código assícrono roda.
+
+    setTimeout(function() {
+      console.log('timeout');
+      console.log('timeout2');
+    }, 3000);
+
+    // CÓDIGO SÍNCRONO
+    console.log('next line');
+
+    // setInterval também é assíncrono, ele executa o primeiro parâmetro (função), a cada X intervalos fornecidos no segundo parâmetro em ms.
+    setInterval(function(){
+      console.log('interval');
+    }, 3000);
+
+    console.log('next line2')
+
+    */
+
+    // método forEach permite percorrer todos os elementos do Array
+    // ele retorna o valor de cada elemento como parâmetro.
+    [
+      'make dinner',
+      'wash dishes',
+      'watch youtube'
+    ].forEach(function(value, index){
+      // forEach não aceita continue ou break, mas o return caso o IF seja true pula aquele elemento com o return.
+      if(value === 'wash dishes'){
+        return;
+      }
+      console.log(index, value);
+    });
+
+
+
+  </script>
+</body>
+</html>

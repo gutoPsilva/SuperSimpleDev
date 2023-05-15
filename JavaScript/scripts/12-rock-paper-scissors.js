@@ -6,6 +6,10 @@ document.querySelector('.js-reset-score-button').onclick = function(){
   localStorage.removeItem('score');
 }
 
+document.querySelector('.js-auto-play-button').addEventListener('click', autoPlay);
+
+
+
 // || operador lógico OU, se tiver um localStorage 'score' pega esse, OU então utiliza o DEFAULT || 0
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins:0,
@@ -24,6 +28,24 @@ if(!score){
   }
 }
 */
+
+let isAutoPlaying = false;
+let intervalId;
+
+function autoPlay(){
+  // senão estiver auto, começa
+  if(!isAutoPlaying){
+    intervalId = setInterval(function(){
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
+    isAutoPlaying = true;
+  }
+  else{
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
+}
 
 //funções permitem reutilizar trechos de código quando são chamadas
 //função com parâmetro --> recebe valor
