@@ -1,6 +1,6 @@
 let messages = 2;
 
-setInterval(function(){
+setInterval(() => {
   console.log(messages);
   if(messages === 0){
     document.title = "App";
@@ -9,14 +9,11 @@ setInterval(function(){
   }
 }, 1000);
 
-document.querySelector('.js-add-button').onclick = function(){
-  messages++;
-}
+document.querySelector('.js-add-button').onclick = () => messages++;
 
-document.querySelector('.js-remove-button').onclick = function(){
+document.querySelector('.js-remove-button').onclick = () => {
   if(messages - 1 < 0){
     return;
   }
-  
   messages--;
-}
+};

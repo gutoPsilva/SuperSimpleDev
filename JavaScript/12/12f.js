@@ -4,11 +4,9 @@ const pElement = document.querySelector('p');
 let resetTimer = false;
 let timeoutId;
 
-addElement.onclick = function (){
+addElement.onclick = () => {
   if(!resetTimer){
-    timeoutId = setTimeout(function(){
-      pElement.innerHTML = ""
-    }, 2000);
+    timeoutId = setTimeout(() => pElement.innerHTML = "", 2000);
     pElement.innerHTML = "Added";
     resetTimer = true;
   }
