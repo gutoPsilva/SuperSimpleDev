@@ -30,7 +30,6 @@ function renderTodoList(){
       renderTodoList();
     })
   });
-
 }
 
 document.querySelector('.js-add-todo-button').addEventListener('click', () => {
