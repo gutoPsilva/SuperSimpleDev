@@ -56,6 +56,10 @@ function addTodo() {
   render();
 }
 
+const addTodo = () => {
+  
+};
+
 function deleteTodo(event) {
   const deleteButton = event.target;
   const idToDelete = deleteButton.id;

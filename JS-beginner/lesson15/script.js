@@ -100,7 +100,7 @@ function onEdit(event){
   const todoId = editButton.dataset.id;
 
   setEditing(todoId);
-  saveTodos();
+  render();
 }
 
 function onUpdate(event){
